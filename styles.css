@@ -1,0 +1,11 @@
+#bigBox{
+    border: 3px solid black;
+    height: 700px;
+    width: 700px;
+}
+
+#leftBox{
+    border: 3px solid purple;
+    height: 300px;
+    width: 300px;
+}
