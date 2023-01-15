@@ -16,6 +16,10 @@ let people = [
         age: 20
     },
     {
+        name: 'Danny',
+        age: 34
+    },
+    {
         name: 'Mochi',
         age: 3
     }
@@ -28,22 +32,58 @@ let people = [
 //  example: "how to get 'name' property in object that's in an array"
 
 (function() {
-    // let rancdom = {name: 'cool', age: 19};
+    rerender();
+})();
+
+function addCard() {
     try {
-        let yourArray = [{name: 'taco bell'}, "Jimmy", 'Test', 4, 5];
-        console.log(yourArray[0].name);
+        people.unshift({
+            name: 'Bob is the coolest',
+            age: 31
+        });
+        rerender();
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+function isTheCoolestUser(name) {
+    return name == 'Bob is the coolest' ? true : false;
+}
+
+function rerender() {
+    try {
+        let htmlMarkup = '<center><button onclick="addCard()">Add New Person</button></center><br/>';
         for(let i = 0; i < people.length; i++){
-            document.getElementById("bigBox").innerHTML +=`
-                <div class="bold">
+            if (isTheCoolestUser(people[i].name)) {
+                htmlMarkup +=`
+                <div class="card-tile hot-red">
                     <div class="circle">${people[i].age}</div>
                     ${people[i].name}
                 </div>
             `;
+            } else if (people[i].name == 'Derek') {
+                htmlMarkup +=`
+                <div class="card-tile derek">
+                    <div class="circle">${people[i].age}</div>
+                    ${people[i].name}
+                </div>
+            `;
+            }
+            else {
+                htmlMarkup +=`
+                    <div class="card-tile">
+                        <div class="circle">${people[i].age}</div>
+                        ${people[i].name}
+                    </div>
+                `;
+            }
         }
+        document.getElementById("bigBox").innerHTML = htmlMarkup;
     } catch (error) {
         console.error(error);
     }
-})();
+}
 
 
     // onclick of item

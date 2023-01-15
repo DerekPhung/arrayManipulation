@@ -3,7 +3,7 @@
     width: 100%;
 }
 
-.bold{
+.card-tile{
     border-radius: 5px;
     font-weight: bold;
     font-size: 30px;
@@ -13,12 +13,19 @@
     width: 400px;
     margin: auto;
     cursor: pointer;
-    transition: background-color .25s;
+    transition: background-color .25s, color .25s, transform .5s;
     padding: 30px 20px;
     margin-bottom: 10px;
 }
-.bold:hover{
+.card-tile:hover {
     background-color: rgb(50, 59, 59);
+    color: white;
+    transform: scale(1.2);
+}
+
+.card-tile:hover .circle {
+    background: white;
+    color: rgb(50, 59, 59);
 }
 
 .circle {
@@ -30,4 +37,20 @@
     text-align: center;
     background: rgb(128, 128, 255);
     display: inline-block;
-  }
+}
+
+.hot-red {
+    border-top:  5px solid rgb(250, 114, 114);
+}
+
+.hot-red .circle {
+    background: rgb(250, 114, 114);
+}
+
+.derek {
+    border-top:  5px solid dodgerblue;
+}
+
+.derek .circle {
+    background: dodgerblue;
+}
