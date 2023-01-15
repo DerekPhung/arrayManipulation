@@ -1,11 +1,33 @@
 #bigBox{
-    border: 3px solid black;
-    height: 700px;
-    width: 700px;
+    height: 100%;
+    width: 100%;
 }
 
-#leftBox{
-    border: 3px solid purple;
-    height: 300px;
-    width: 300px;
+.bold{
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid rgb(202, 200, 200);
+    border-top:  5px solid rgb(128, 128, 255);
+    width: 400px;
+    margin: auto;
+    cursor: pointer;
+    transition: background-color .25s;
+    padding: 30px 20px;
+    margin-bottom: 10px;
 }
+.bold:hover{
+    background-color: rgb(50, 59, 59);
+}
+
+.circle {
+    width: 80px;
+    line-height: 80px;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    background: rgb(128, 128, 255);
+    display: inline-block;
+  }
