@@ -48,7 +48,7 @@ function addCard() {
 }
 
 function isTheCoolestUser(name) {
-    return name == 'Bob is the coolest' ? true : false;
+    return name == 'Bob is the coolest';
 }
 
 function rerender() {
